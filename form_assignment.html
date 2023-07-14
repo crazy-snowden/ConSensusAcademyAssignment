@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    
+    <style>
+        body {
+            background-color: white;
+            margin: 10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       
+        form {
+            background-color:rgb(243, 243, 217);
+            border-radius: 10px;
+            
+            width: 500px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        input[type="date"] {
+            width: 90%;
+         padding: 10px;
+            margin-bottom: 10px;
+        border: 2px solid rgb(75, 67, 83);
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 2px;
+        }
+        
+        label {
+            font-size: 14px;
+        }
+        
+        input[type="submit"] {
+            background-color: rgb(193, 52, 52);
+            color: white;
+          padding: 10px 20px;
+            
+            border-radius: 2px;
+        cursor: pointer;
+            font-size: 14px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color:lightblue;
+            border-radius: 13px;
+        }
+        
+        legend {
+            color: rgb(27, 27, 133);
+            border-color: rgb(195, 135, 135);
+          font-weight: bold;
+      margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+        }
+        
+        h1 {
+            color: rgb(182, 51, 51);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+      h2 {
+        color: rgb(64, 11, 126);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body{
+            color: rgb(203, 39, 39);
+        }
+    </style>
+  
+</head>
+<body>
+    
+    <form action="welcome.html">
+
+        <h1 style="color: rgb(0, 0, 0);font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> <u>Sign Up</u></h1>
+       <center> <input type="text" name="fname" placeholder="First Name" required minlength="5"></center>
+        <br>
+        <center><input type="text" name="lname" placeholder="Last Name" required></center> <br>
+        <center><input type="email" name="email" placeholder="Email" required></center>
+        <br>
+        <center><input type="number" name="contact" placeholder="Mobile Number" required step="5"></center>
+        <br>
+       <center> <input type="date" placeholder="Date of Birth"></center>
+        <br>
+        <legend>Gender</legend>
+       <center> <select name="gender" id="gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select></center>
+        <br>
+        <input type="checkbox" name="smsNotification" id="smsnote">
+        <label for="smsnote">Receive SMS Notifications</label>
+        <br>
+        <input type="checkbox" name="mailNotification" id="mailnote">
+        <label for="mailnote">Receive Email Notifications</label>
+        <br><br>
+        <center><input type="submit" value="Create Account" style="border-radius: 13px;" ></center>
+    </form>
+</body>
+</html>
