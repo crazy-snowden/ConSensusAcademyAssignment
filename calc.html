@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .calc{
+        width:500px;
+        height:500px;
+        margin-left:470px;
+        margin-top:80px;
+        border:3px solid black;
+        background:linear-gradient(yellow,blue);
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+    }
+    .i1{
+        width:200px;
+        height:100px;
+        border-radius:10%;
+        background:linear-gradient(orange,red);
+        text-align: center;
+        font-size: larger;
+    }
+    .i2{
+        width:200px;
+        height:100px;
+        border-radius:10%;
+        background:linear-gradient(red,orange);
+        text-align:center;
+        font-size: larger;
+    }
+    .i7{
+        width:200px;
+        height:100px;
+        border-radius:10%;
+        background:linear-gradient(crimson,firebrick);
+        text-align: center;
+        font-size: larger;
+    }
+    .flex-container{
+        height:60px;
+        display:flex;
+        margin:25px;
+        border-radius:10%;
+        flex-direction:row;
+        justify-content: center;
+    }
+    body{
+        background-color:firebrick;
+    }
+    </style>
+</head>
+<body>
+    <div class="calc">
+    <h1><u>CALCULATOR</u></h1>
+    <input id="i1" class="i1" type="number" placeholder="ENTER YOUR INPUT"><br>
+    <input id="i2" class="i2" type="number" placeholder="ENTER YOUR INPUT"><br><br>
+    <div class="flex-container">
+    <button onclick="add()">+</button><br><br>
+    <button onclick="sub()">-</button><br><br>
+    <button onclick="mul()">*</button><br><br>
+    <button onclick="div()">/</button><br><br>
+    <button onclick="mod()">%</button><br><br>
+    </div>
+    <input id="i3" class="i7" type="number" placeholder="RESULT"><br>
+    </div>   
+    <div class="b"></div>
+    <div class="c"></div> 
+    <script>
+        function add(){
+            let num1=Number(document.getElementById('i1').value)
+            let num2=Number(document.getElementById('i2').value)
+            let result=num1+num2;
+            document.getElementById('i3').value=result;
+        }
+        function sub(){
+            let num1=Number(document.getElementById('i1').value)
+            let num2=Number(document.getElementById('i2').value)
+            let result=num1-num2;
+            document.getElementById('i3').value=result;
+        }
+        function mul(){
+            let num1=Number(document.getElementById('i1').value)
+            let num2=Number(document.getElementById('i2').value)
+            let result=num1*num2;
+            document.getElementById('i3').value=result;
+        }
+        function div(){
+            let num1=Number(document.getElementById('i1').value)
+            let num2=Number(document.getElementById('i2').value)
+            let result=num1/num2;
+            document.getElementById('i3').value=result;
+        }
+        function mod(){
+            let num1=Number(document.getElementById('i1').value)
+            let num2=Number(document.getElementById('i2').value)
+            let result=num1%num2;
+            document.getElementById('i3').value=result;
+        }
+    </script>
+</body>
+</html>

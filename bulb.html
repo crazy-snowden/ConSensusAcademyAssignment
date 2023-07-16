@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 400px;
+            width: 400px;
+            border: 5px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="i1" onclick="Light(1)">On</button>
+    <img id="i2" src="Assets/Off.jpeg" alt="Bulb-Off">
+    <button id="i3" onclick="Light(0)">Off</button>
+    <script>
+        function Light(num){
+            var pic;
+            if(num==1){
+                pic="Assets/On.jpeg"
+            }
+            else{
+                pic="Assets/Off.jpeg"
+            }
+            document.getElementById('i2').src=pic;
+        }
+    </script>
+</body>
+</html>
